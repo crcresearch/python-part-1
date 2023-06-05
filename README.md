@@ -62,3 +62,49 @@ We can combine these values using the `and`, `or`, and `not` keywords in Python 
 
 We can also chain these together in infinately long logic by combining the logic operators.  The logic flows from left &rarr; right.  See lines 30-34 of `general_logic.py`, and think about why they give different results.
 
+
+## Topic 3: Variables
+
+Python variables are much like other programming language variables where you can name a variable and update/fetch the variable's value.  However, Python does not require you to declare the variable type, and the type can change throughout your code.  The most basic Python variable types are:
+
+* Boolean (`True` or `False`)
+* Integer
+* Float
+* String
+* Class (we'll get to this in Part II)
+
+You can assign variables with the `=` operator.
+
+## Topic 4: Mathematical Operators
+
+### +, -, *, /, %
+
+And how they impact various variable types
+
+## Topic 5: Basic Data Structures
+
+### List
+
+### Dictionary
+
+
+## Topic 6: Logic Flow
+
+### If/else
+
+### while
+
+### for
+
+## Topic 7: Input and Output
+
+### Screen and Keyboard
+
+### File Access
+
+## Topic 8: Importing Libraries
+
+
+## PROJECT:
+
+Using what we learned, write a script that generates a random number between 0 and 100, and have the user guess!
