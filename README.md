@@ -71,22 +71,121 @@ Python variables are much like other programming language variables where you ca
 * Integer
 * Float
 * String
-* Class (we'll get to this in Part II)
+* Class (no covered in this course)
 
 You can assign variables with the `=` operator.
+
+```python
+w = True
+x = 1
+y = 2.5
+z = "Hello world!"
+```
+
+You can change the variable (and it's type):
+```python
+w = True
+w = 2.5
+w = "Yes!"
+```
+
+You can see what the type of the variable is with:
+
+```python
+w = True
+type(w)
+
+w = 2.5
+type(w)
+```
+
+You can compare two variables to see if they're the same with the `==` operator: note how this is different than `=`
+
+```python
+x = True
+y = False
+
+x == y
+
+y = True
+
+x == y
+```
 
 ## Topic 4: Mathematical Operators
 
 ### +, -, *, /, %
 
-And how they impact various variable types
+Operators will perform different actions based on the variable types.
+
+In summary:
+- `+` adds numbers, concatonates strings
+- `-` subtracts numbers, doesn't support strings
+- `*` multiples numbers, doesn't support strings (but DOES support a string and a number!)
+- `/` devides numbers (always returns float), doesn't support strings
+- `%` returns the remainder of a division (numbers only)
+
+```python
+x = 10
+y = 2
+
+x + y
+
+x - y
+
+x * y
+
+x / y
+
+x % y
+```
+
+```python
+x = 10
+y = 'hello'
+z = 'world'
+
+y + z
+
+x * y
+```
+
+What other combinations are there?
+
 
 ## Topic 5: Basic Data Structures
 
 ### List
 
+A list is an ordered series of values.  They don't need to be the same type, and the order is preserved.  Lists in Python are `zero-indexed`:
+
+```python
+l = [False, 1, 2.5, 'three']
+
+l[0]
+
+l[3]
+
+l[-1]
+
+l[0] = True
+
+x = 100
+
+l[1] = x
+```
+
 ### Dictionary
 
+A dictionary is a structured data object with `key: value` pairs.  A dictionary's order is not guaranteed to be preserved, but they `key: value` pairs always will be.
+
+```python
+d = {'name': 'david', 'age': 10, 'location': 'Notre Dame', 'is_awake': True}
+
+d['name']
+
+d['is_awake'] = False
+```
 
 ## Topic 6: Logic Flow
 
