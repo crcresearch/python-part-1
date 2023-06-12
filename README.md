@@ -267,13 +267,103 @@ Note how `i` was the new variable, and each iteration (or round) of the loop, `i
 
 ## Topic 7: Input and Output
 
-
-
 ### Screen and Keyboard
+
+You can send things to the terminal with the `print` function:
+
+```python
+print("Hello world!")
+```
+
+And you can format strings to inject variables with:
+
+```python
+x = 10
+
+print(f"The value of x is: {x}")
+```
+
+And use special characters such as `\n` and `\t`:
+
+```python
+print("Here is a new line:\n...and the second line!")
+
+print("Here is a tab:\twith some text after it")
+```
+
+And you can grab values from the user with the `input` command:
+
+```python
+x = input("What is your name?")
+
+y = input("What is your age?")
+```
+
+Note that the `input` command will always return a string!  So if you want to use the input as an integer or float, you'll need to type-cast it by wrapping it in either `int()` or `float()`:
+
+```python
+x = input("What is your name?")
+
+y = int(input("What is your age?"))
+```
+
 
 ### File Access
 
+File Input/Output (I/O) is very easy using the `open` function:
+
+```python
+# to read a file (read-only), pass in the 'r' parameter:
+file_in = open('test.txt', 'r')
+
+# then loop over the lines in the file:
+for line in file_in.readlines():
+    print(line)
+
+# close the file with:
+file_in.close()
+```
+
+
+You can also write to new files:
+```python
+# to write a file (either new file or replace the file), pass in the 'w' parameter:
+file_out = open('test2.txt', 'w')
+
+# write your text:
+file_out.write("This is some sample text!")
+
+# close the file with:
+file_out.close()
+```
+
+Lastly, you can append to an existing file:
+```python
+# to write a file in APPEND mode, pass in the 'a' parameter:
+file_out = open('test2.txt', 'a')
+
+# write your text:
+file_out.write("This is some MORE text!")
+
+# close the file with:
+file_out.close()
+```
+
 ## Topic 8: Importing Libraries
+
+A python library is a pre-written collection of functions with a specific purpose to bring new features to your script.  Python has many libraries installed by default, but others can be downloaded and installed using `pip` that are published at: https://pypi.org/
+
+For now, let's import a built-in library for generating random numbers:
+
+```python
+import random
+
+# generate a random float number between 0 and 1:
+x = random.random()
+
+# generate a random integer between 1 and 1000
+y = random.randint(1, 1000)
+```
 
 
 ## PROJECT:
