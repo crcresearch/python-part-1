@@ -191,11 +191,83 @@ d['is_awake'] = False
 
 ### If/else
 
+An `if` statment will execute the tabbed code under it if the condition is `True`:
+
+```python
+x = 10
+y = False
+
+if x > 5:
+    y = True
+
+```
+
+Using the `else` statement we can tell it to do something `else` if the statement is `False`:
+
+```python
+x = 10
+y = 0
+
+if x > 5:
+    y = 'Yes'
+else:
+    y = 'No'
+```
+
+You can also combine logic using `and`, `or`, and `not` as seen before:
+
+```python
+shirt = 'red'
+pants = 'red'
+is_all_red = None
+
+if shirt == 'red' and pants == 'red':
+    is_all_red = True
+else:
+    is_all_red = False
+```
+
 ### while
+
+A `while` loop will repeatedly execute the code under it until the condition becomes `False`.  IMPORTANT: always make sure there is code within the `while` loop that modifies the check, otherwise you will end up stuck in an `infinite loop`:
+
+```python
+x = 0
+
+while x < 10:
+    x = x + 1
+    print(x)
+```
+
+An example of an infinite loop:
+
+```python
+x = 0
+y = 0
+
+while y < 10:
+    x = x + 1
+    print(x)
+```
+
+Can you spot why?  If you're stuck in an infinite loop, press `Ctrl+C` to exit the loop.
 
 ### for
 
+A `for` loop allows you to iterate over a list, where each element of the list is assigned to a designated variable on each iteration:
+
+```python
+l = [1, 2, 3, 4, 5]
+
+for i in l:
+    print("The next item in the list is:", i)
+```
+
+Note how `i` was the new variable, and each iteration (or round) of the loop, `i` was assigned the next element in the list.
+
 ## Topic 7: Input and Output
+
+
 
 ### Screen and Keyboard
 
